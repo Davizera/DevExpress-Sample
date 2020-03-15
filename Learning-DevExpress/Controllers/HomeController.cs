@@ -29,6 +29,12 @@ namespace Learning_DevExpress.Controllers
             return Json(SampleData.DataGridEmployees.ToList());
         }
 
+        public IActionResult Put(int key, string values)
+        {
+
+            return Ok();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

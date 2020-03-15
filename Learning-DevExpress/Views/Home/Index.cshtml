@@ -18,11 +18,21 @@
                     .At(HorizontalAlignment.Center, VerticalAlignment.Top)
                     .Of(new JS("window"))
                     )
-                )
-            
+                ).Form(f => f.Items(items =>
+                {
+                    items
+                        .AddGroup()
+                        .ColCount(2)
+                        .ColSpan(2)
+                        .Items(groupItems =>
+                        {
+                            groupItems.AddSimpleFor(m => m.FirstName);
+                        });
+                }))
+
         )
         .Columns(columns =>
-            {
+        {
             columns.AddFor(m => m.Prefix)
                 .Width(70);
 
